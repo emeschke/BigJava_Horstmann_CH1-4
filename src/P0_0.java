@@ -34,6 +34,22 @@ public class P0_0 {
                 break;
             }
         }
+        if (intValues.size() == 0){
+            System.out.println("Not enough data");
+            return;
+        }
+
+        //let's assume the zero'th element is the max
+        Integer intMax =  intValues.get(0);
+        Integer intTest;
+        //from 1 to the end of ArrayList
+        for (int nC = 1; nC < intValues.size(); nC++) {
+            intTest = intValues.get(nC);
+            if(intTest > intMax){
+                intMax = intTest;
+            }
+        }
+        System.out.println("Max value is " + intMax);
 
     }
 }
