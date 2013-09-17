@@ -21,5 +21,19 @@ public class P0_0 {
                 // set max to value
         //print the max value to the console
 
+
+        Scanner in = new Scanner(System.in);
+        ArrayList<Integer> intValues = new ArrayList<Integer>();
+
+        while(true){
+            try {
+                System.out.print("Type integer value or \"quit\" to exit:");
+                //any value that is not an integer (including "quit") will throw an exception, which breaks out of the loop
+                intValues.add(in.nextInt());
+            } catch ( Exception e) {
+                break;
+            }
+        }
+
     }
 }
