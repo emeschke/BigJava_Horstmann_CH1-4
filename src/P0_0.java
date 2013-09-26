@@ -22,14 +22,15 @@ public class P0_0 {
         //print the max value to the console
 
 
-        Scanner in = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        //use the wrapper class Integer. Use diamond notation from Java7 and omit the right-hand "Integer" if you want
         ArrayList<Integer> intValues = new ArrayList<Integer>();
 
         while(true){
             try {
                 System.out.print("Type integer value or \"quit\" to exit:");
                 //any value that is not an integer (including "quit") will throw an exception, which breaks out of the loop
-                intValues.add(in.nextInt());
+                intValues.add(scan.nextInt());
             } catch ( Exception e) {
                 break;
             }
