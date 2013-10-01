@@ -11,8 +11,8 @@ public class P1_10 {
         //This is pretty simple, just make a drawing within the text of the print and then have it display
         // using the System.out.println() command.
 
-        System.out.println("Hello Grader!!" + "/n");
-        System.out.println("    HHHH     HHHH    ");
+        System.out.println("Hello Grader!!        ");
+        System.out.println("    HHHH     HHHH     ");
         System.out.println("      H       H       ");
         System.out.println("          >           ");
         System.out.println("         >>>          ");
