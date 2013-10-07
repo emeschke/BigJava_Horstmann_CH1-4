@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -14,18 +15,18 @@ public class P2_17 {
         int firstTime = 0;
         int secondTime = 0;
 
-        //try{
+        try{
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter the first time (ex: 1500):");
         firstTime = in.nextInt();
         System.out.print("Please enter the second time:");
         secondTime = in.nextInt();
-        //}
+        }
 
-        //catch(){
-        //    System.out.println("Not a valid input.  Please run program again." );
-        //    System.exit(1);
-        //}
+        catch(InputMismatchException ex){
+            System.out.println("Not a valid input.  Please run program again." );
+            System.exit(1);
+        }
 
         //Find the value of the hours and minutes in each time.
         int minutesFirst = firstTime % 100;

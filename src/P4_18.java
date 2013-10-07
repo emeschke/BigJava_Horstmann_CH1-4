@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -13,16 +14,16 @@ public class P4_18 {
         //Prompt user to enter an integer input to find primes below.  Use a try/catch to handle non-integer inputs
         int number = 0;
 
-        //try{
+        try{
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter a number:");
         number = in.nextInt();
-        //}
+        }
 
-        //catch(){
-        //    System.out.println("Not a valid input.  Please run program again." );
-        //    System.exit(1);
-        //}
+        catch(InputMismatchException ex){
+            System.out.println("Not a valid input.  Please run program again." );
+            System.exit(1);
+        }
 
         int [] primes = prime_calc(number);
         for (int i = 0; i < primes.length; i++){

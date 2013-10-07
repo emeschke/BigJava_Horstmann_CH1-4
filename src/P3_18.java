@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -15,18 +16,18 @@ public class P3_18 {
         int month = 0;
         int date = 0;
 
-        //try{
+        try{
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter a month (1-12):");
         month = in.nextInt();
         System.out.print("Please enter a date:");
         date = in.nextInt();
-        //}
+        }
 
-        //catch(){
-        //    System.out.println("Not a valid input.  Please run program again." );
-        //    System.exit(1);
-        //}
+        catch(InputMismatchException ex){
+            System.out.println("Not a valid input.  Please run program again." );
+            System.exit(1);
+        }
 
         //Test to see if the month is valid (1-12) and if the date is valid within the month.
         if (month < 1 || month > 12 || date < 1 || date > 31 || (month == 2 && date > 29) ||

@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -15,16 +16,16 @@ public class P3_21 {
 
         double income = 0;
 
-        //try{
+        try{
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter income to calculate 1913 income tax:");
         income = in.nextDouble();
-        //}
+        }
 
-        //catch(){
-        //    System.out.println("Not a valid input.  Please run program again." );
-        //    System.exit(1);
-        //}
+        catch(InputMismatchException ex){
+            System.out.println("Not a valid input.  Please run program again." );
+            System.exit(1);
+        }
 
         //Pass income to method that calculates the income tax.
         double tax = tax_calc(income);

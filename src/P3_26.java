@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -13,16 +14,16 @@ public class P3_26 {
         //Prompt user for integer input of a number to find the roman numeral of.  Try/catch to make sure it is an int.
         int year = 0;
 
-        //try{
+        try{
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter the year, between 0 and 3999:");
         year = in.nextInt();
-        //}
+        }
 
-        //catch(){
-        //    System.out.println("Not a valid input.  Please run program again." );
-        //    System.exit(1);
-        //}
+        catch(InputMismatchException ex){
+            System.out.println("Not a valid input.  Please run program again." );
+            System.exit(1);
+        }
 
         //Check to make sure 0 <= year < 4000.
         if (year < 0 || year > 3999){
