@@ -41,7 +41,7 @@ public class P3_21 {
         double tax = 0;
 
         //Write a loop to calculate the tax owed.  1% is owed on the max(income, 0).  An additional 1% is owed on
-        //max(income-50000, 0), etc over all six value.
+        //max(income-50000, 0), etc over all six values.
         for (int i = 0; i<6; i++){
             tax += .01*Math.max((income-brackets[i]) , 0);
         }

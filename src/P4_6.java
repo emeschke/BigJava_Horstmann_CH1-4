@@ -42,7 +42,7 @@ public class P4_6 {
         }
 
         //Use the catch to kick out if there is a non-int input.  Check whether there is a minimum, indicated
-        //by the first variable being reset.  If there is, print it.
+        //by the first variable being reset to false.  If there is, print it, otherwise print that there was not min.
 
         catch(InputMismatchException ex){
 

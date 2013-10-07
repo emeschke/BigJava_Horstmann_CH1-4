@@ -49,7 +49,7 @@ public class P4_18 {
                 int[] none = {};
                 return none;
             }
-
+            //Initialize an array from 0 to (input - 1) of integer values.
             for (int i = 0; i < input; i++){
                 numbers[i] = i;
             }
